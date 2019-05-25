@@ -17,22 +17,6 @@ class Stack:
     def size(self):
         return len(self.items)
 
-stack = Stack()
-print(stack.is_empty())
-
-stack.push(1)
-print(stack.is_empty())
-
-item = stack.pop()
-print(item)
-print(stack.is_empty())
-
-for i in range(0, 6):
-    stack.push(i)
-
-print(stack.peek())
-print(stack.size())
-
 word_stack = Stack()
 for c in "Hello":
     word_stack.push(c)
@@ -42,3 +26,31 @@ while word_stack.size():
     reverse += word_stack.pop()
 
 print(reverse)
+
+
+print("--practice No.1--")
+string = "yesterday"
+str_stack = Stack()
+
+for c in string:
+    str_stack.push(c)
+
+reverse_string = ""
+while str_stack.size():
+    reverse_string += str_stack.pop()
+
+print(reverse_string)
+
+
+print("--practice No.2--")
+items = [1, 2, 3, 4, 5]
+
+item_stack = Stack()
+for i in items:
+    item_stack.push(i)
+
+reverse_item = []
+while item_stack.size():
+    reverse_item.append(item_stack.pop())
+
+print(reverse_item)
