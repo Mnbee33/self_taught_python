@@ -36,7 +36,7 @@ for c in string:
     str_stack.push(c)
 
 reverse_string = ""
-while str_stack.size():
+while not str_stack.is_empty():
     reverse_string += str_stack.pop()
 
 print(reverse_string)
@@ -50,7 +50,7 @@ for i in items:
     item_stack.push(i)
 
 reverse_item = []
-while item_stack.size():
+while not item_stack.is_empty():
     reverse_item.append(item_stack.pop())
 
 print(reverse_item)
